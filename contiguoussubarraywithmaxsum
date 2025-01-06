@@ -1,0 +1,19 @@
+class Solution {
+  public:
+    // Function to find the sum of contiguous subarray with maximum sum.
+    int maxSubarraySum(vector<int> &arr) 
+    {
+        int maxsum=arr[0];
+        for(int i=0;i<arr.size();i++)
+        {
+            int cursum=0;
+            for(int j=i;j<arr.size();j++)
+            {
+                cursum=cursum+arr[j];
+                maxsum=max(maxsum,cursum);
+                
+            }
+        }
+        return maxsum;
+    }
+};
