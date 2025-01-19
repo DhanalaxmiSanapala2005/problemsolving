@@ -1,0 +1,32 @@
+class Solution {
+  public:
+    // Function to check if a string is a palindrome.
+    bool isPalindrome(string& s) {
+        int left=0;
+        int right=s.size()-1;
+        bool flag=true;
+        while(left<right)
+        {
+            if(s[left]!=s[right])
+            {
+                flag=false;
+                break;
+            }
+            left++;
+            right--;
+        }
+        if(left>=right)
+        {
+            return true;
+        }
+            if(flag)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    
+};
